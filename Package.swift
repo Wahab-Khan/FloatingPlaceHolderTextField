@@ -5,7 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "FloatingPlaceHolderTextField",
-    products: [
+    platforms: [
+        .iOS(.v16)
+    ], products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "FloatingPlaceHolderTextField",
@@ -20,5 +22,6 @@ let package = Package(
             name: "FloatingPlaceHolderTextFieldTests",
             dependencies: ["FloatingPlaceHolderTextField"]
         ),
-    ]
+    ],
+
 )
