@@ -5,12 +5,9 @@
 //  Created by Abdul Wahab Khan on 26/04/2025.
 //
 
-
 import SwiftUI
 
-
-
-@available(macOS 14.0, *)
+@available(macOS 17.0, *)
 public struct CutomTextInputField: View {
     let text: String
     @Binding var inputText: String
