@@ -11,7 +11,7 @@ import SwiftUI
 
 
 @available(macOS 14.0, *)
-struct CutomTextInputField: View {
+public struct CutomTextInputField: View {
     let text: String
     @Binding var inputText: String
     @FocusState private var isFocused: Bool
@@ -24,7 +24,7 @@ struct CutomTextInputField: View {
 
     @State private var errorMessage: String?
 
-    init(
+    public init(
         text: String,
         inputText: Binding<String>
     ) {
@@ -32,7 +32,7 @@ struct CutomTextInputField: View {
         self._inputText = inputText
     }
 
-    var body: some View {
+    public var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             ZStack(alignment: .leading) {
 

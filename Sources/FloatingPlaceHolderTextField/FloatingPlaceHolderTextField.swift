@@ -13,7 +13,7 @@ let borderColor = Color.gray
 #endif
 
 @available(macOS 14.0, *)
-struct TextInputField : View {
+public struct TextInputField : View {
     let placeholder : String
     @Binding var inputText : String
     @FocusState private var isFocused: Bool
@@ -22,12 +22,12 @@ struct TextInputField : View {
     @Environment(\.clearButtonOnTextField) var clearButtonOnTextField
     @Environment(\.textFieldBorderColor) var textFieldBorderColor
     
-    init(text: String, inputText: Binding<String>) {
+    public init(text: String, inputText: Binding<String>) {
         self.placeholder = text
         self._inputText = inputText
     }
     
-    var body: some View {
+    public var body: some View {
         
         ZStack(alignment: .leading) {
             
