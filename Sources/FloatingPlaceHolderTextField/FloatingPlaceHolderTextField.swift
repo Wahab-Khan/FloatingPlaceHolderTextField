@@ -4,13 +4,6 @@
 
 
 import SwiftUI
-#if canImport(UIKit)
-import UIKit
-let borderColor = Color(UIColor.systemGray4)
-#else
-@available(macOS 10.15, *)
-let borderColor = Color.gray
-#endif
 
 @available(macOS 14.0, *)
 public struct TextInputField : View {
@@ -50,9 +43,7 @@ public struct TextInputField : View {
                 .padding(.trailing , isFocused ? 50 : 0)
                 .padding([.top , .bottom], 5)
                 .border(
-                    isFocused ? textFieldBorderColor : Color(
-                        borderColor
-                    ),
+                    isFocused ? textFieldBorderColor : Color.gray ,
                     width: 2.0
                 )
                 .cornerRadius(4.0)
@@ -72,7 +63,7 @@ public struct TextInputField : View {
                     inputText = ""
                 } label: {
                     Image(systemName: "xmark.circle.fill")
-                        .foregroundColor(Color(borderColor))
+                        .foregroundColor(Color.gray)
                         .padding(.trailing, 22)
                 }
             }else{
