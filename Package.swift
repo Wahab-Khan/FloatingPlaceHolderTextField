@@ -23,5 +23,4 @@ let package = Package(
             dependencies: ["FloatingPlaceHolderTextField"]
         ),
     ],
-
 )
